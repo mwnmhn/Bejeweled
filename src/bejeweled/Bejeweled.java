@@ -16,9 +16,10 @@ public class Bejeweled {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Plateau testPlateau=new Plateau(10);
+        Plateau testPlateau=new Plateau(5);
         testPlateau.fillPlateau();
         testPlateau.printTable();
+        testPlateau.printTableReverse();
     }
     ////
 }
