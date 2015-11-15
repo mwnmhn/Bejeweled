@@ -52,4 +52,15 @@ public class Plateau {
         }
         System.out.println();
     }
+    //checks if the gem is part of a combination
+    public boolean checkIfInCombination(int x, int y){
+        boolean bol=false;
+        //pour la verticale
+        if ((table.get(x).get(y).getColor()==table.get(x-1).get(y).getColor())&&(table.get(x).get(y).getColor()==table.get(x+1).get(y).getColor())) 
+            bol=true;
+        //pour l'horizontale
+        if ((table.get(x).get(y).getColor()==table.get(x).get(y-1).getColor())&&(table.get(x).get(y).getColor()==table.get(x).get(y+1).getColor()))
+            bol=true;
+        return bol;
+    }
 }
